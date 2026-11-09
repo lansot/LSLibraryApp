@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="lslibraryapp.client/lslibraryapp.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="LSLibraryApp.Server.Tests/LSLibraryApp.Server.Tests.csproj" />
+  <Project Path="LSLibraryApp.Server/LSLibraryApp.Server.csproj" />
+</Solution>

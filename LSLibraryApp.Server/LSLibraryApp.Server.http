@@ -1,0 +1,75 @@
+@LSLibraryApp.Server_HostAddress = http://localhost:5107
+
+GET {{LSLibraryApp.Server_HostAddress}}/topics/
+Accept: application/json
+
+###
+
+GET {{LSLibraryApp.Server_HostAddress}}/topics/6
+Accept: application/json
+
+###
+
+POST {{LSLibraryApp.Server_HostAddress}}/topics/
+Content-Type: application/json
+
+{
+  "title": "test topic bababbababa",
+  "body": "",
+  "tags": [ {"name": "test tag" } ],
+  "version": 1
+}
+
+###
+
+PUT {{LSLibraryApp.Server_HostAddress}}/topics/6
+Content-Type: application/json
+
+{
+  "id": 6,
+  "title": "test topic bababbababa",
+  "body": "",
+  "tags": [
+    {
+      "name": "yeah"
+    },
+    {
+      "name": "getting-started"
+    }
+  ],
+  "version": 1
+}
+
+###
+
+GET {{LSLibraryApp.Server_HostAddress}}/topics/3/usage
+Accept: application/json
+
+###
+
+GET {{LSLibraryApp.Server_HostAddress}}/books/
+Accept: application/json
+
+###
+
+GET {{LSLibraryApp.Server_HostAddress}}/books/3
+Accept: application/json
+
+###
+
+POST {{LSLibraryApp.Server_HostAddress}}/books/3/references
+Content-Type: application/json
+
+{
+  "bookId": 3,
+  "topicId": 1,
+  "level": 2,
+  "position": 2
+}
+
+###
+
+DELETE {{LSLibraryApp.Server_HostAddress}}/books/3/references/13
+Accept: application/json
+
+###
